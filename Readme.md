@@ -55,7 +55,7 @@ _Setup the db schema_ ``` # python create_db_schema.py ```
 ## How to run the Item Catalog APP
 
 _To launch the application run_ ``` # python catalogo.py ```
-_Go to http://localhost:5000/catalog/ to access the application on your web browser._
+_Go to https://localhost:5000/catalog/ to access the application on your web browser. Remember to trust the self-signed certificate._
 
 
 ## JSON EndPoints
