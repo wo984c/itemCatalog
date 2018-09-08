@@ -18,7 +18,8 @@ _For the live version of this APP click [here](https://itemcatalog.wo984c.net)._
 
 ## Getting Started
 
-_Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)_.
+_Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)_
+_Install [Vagrant](https://www.vagrantup.com/downloads.html)_
 _Clone the Udacity's VM repo_
 ``` sh
 # git clone https://github.com/udacity/fullstack-nanodegree-vm 
@@ -69,10 +70,10 @@ _In addition to the GUI, the following JSON Endpoins have been implemented:_
 
 ## License
 
-_Multi User Blog is released under the [MIT license](https://github.com/wo984c/itemCatalog/LICENSE.txt)._
+_Multi User Blog is released under the [MIT license](https://github.com/wo984c/itemCatalog/blob/master/LICENSE.txt)._
 
 
-# References
+## References
 
 * _https://www.virtualbox.org/wiki_
 * _https://www.vagrantup.com/_
@@ -80,7 +81,3 @@ _Multi User Blog is released under the [MIT license](https://github.com/wo984c/i
 * _https://developers.google.com/_
 * _https://www.sqlalchemy.org/_
 * _http://book.pythontips.com/en/latest/decorators.html_
-
-
-
-
