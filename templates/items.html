@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-12">
+
+<!--MESSAGE FLASHING -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+    <ul>
+        {% for message in messages %}
+            <li><strong>{{message}}</strong></li>
+        {% endfor %}
+
+    </ul>
+
+    {% endif %}
+    {% endwith %}
+
+</div>
+
+
+<div class="col-md-4 col-sm-4 col-xm-4 left-pane">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Category
+        </div>
+
+        <div class="panel-body text-left">
+
+            <p href="#" class="card-link">{{category.name}}</p>
+
+        </div>
+
+        <div class="panel-footer text-right">
+
+            <a href="{{ url_for('editCategory', category_name=category.name)}}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+            <a href="{{ url_for('delCategory', category_name=category.name)}}"><span class="glyphicon glyphicon-trash"></span></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-8 col-sm-8 col-xm-8">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Items
+        </div>
+
+        <div class="panel-body text-left">
+            {% for item in items %}
+
+                <a href="{{ url_for('describeItem',category_name=category.name, item_name=item.name) }}" class="card-link">{{item.name}}</a>
+
+                <br>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="panel-footer text-right">
+
+            <a href="{{ url_for('addItem',category_name=category.name)}}"><span class="glyphicon glyphicon-plus"></span></a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

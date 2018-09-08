@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-12 col-sm-12 col-xm-12 left-pane">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Edit
+        </div>
+
+        <div class="panel-body text-left">
+            <form name="form" method="post">
+                <div class="form-group">
+
+                    <label for="item_lbl">Item *</label>
+                    <input type='text' name="name" required value="{{item.name}}">
+                    <br><br>
+
+                    <label for="category_lbl">Category *</label>
+                    <select name="category">
+                        {% for cat in cats %}
+                            {% if cat.id == category.id %}
+
+                                <option id="{{cat.id}}" value="{{cat.id}}" selected>{{cat.name}}</option>
+
+                            {% else %}
+
+                                <option id="{{cat.id}}" value="{{cat.id}}">{{cat.name}}</option>
+
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br><br>
+
+                    <label for="item_desc_lbl">Description *</label>
+
+                    <textarea class="form-control" input name="description" rows="8" required>{{item.description}}</textarea>
+
+                </div>
+
+                <div class="form_button">
+
+                    <button class="btn btn-primary" type="submit" value="submit">edit</button>
+
+                    <a href = "{{url_for('listItems', category_name=category.name)}}" class="btn btn-danger">Cancel</a>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

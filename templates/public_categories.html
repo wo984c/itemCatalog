@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-12">
+
+    <!--MESSAGE FLASHING -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+    <ul>
+        {% for message in messages %}
+            <li><strong>{{message}}</strong></li>
+        {% endfor %}
+        
+    </ul>
+    
+    {% endif %}
+    {% endwith %}
+
+</div>
+
+
+<div class="col-md-4 col-sm-4 col-xm-4 left-pane">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Categories
+        </div>
+
+        <div class="panel-body text-left">
+
+            {% for category in categories %}
+
+                <a href="{{ url_for('listItems', category_name=category.name) }}" class="card-link">{{category.name}}</a>
+                <br>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-8 col-sm-8 col-xm-8">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Latest Items
+        </div>
+
+        <div class="panel-body text-left">
+
+            {% for recentItem in recentItems %}
+
+                <a href="{{ url_for('describeItem', category_name=recentItem.category.name, item_name=recentItem.name) }}" class="card-link">{{recentItem.name}} ({{recentItem.category.name}})</a>
+                <br>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

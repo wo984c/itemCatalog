@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-12 col-sm-12 col-xm-12 left-pane">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            Delete Category
+        </div>
+
+        <div class="panel-body text-left">
+            <form name="form" method="post">
+
+                <div class="form-group">
+                    <label for="category_lbl">Are you sure you want to delete {{category.name}} *</label>
+                </div>
+
+                <div class="form_button">
+
+                    <button class="btn btn-primary" type="submit" value="submit">Yes</button>
+
+                    <a href = "{{url_for('listItems', category_name=category.name)}}" class="btn btn-danger">No</a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+img {
+    margin-top: 10%;
+    border-radius: 40px;
+}
+
+.centering {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.result {
+    padding-top: 10px;
+    text-align: center;
+
+}

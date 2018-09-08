@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-md-12 col-sm-12 col-xm-12 left-pane">
+    <div class="panel panel-primary text-center">
+
+        <div class="panel-heading">
+            {{ item.name }}
+        </div>
+
+        <div class="panel-body text-left">
+                <p>{{item.description}}</p>
+        </div>
+
+        <div class="panel-footer text-right">
+            
+            <a href="{{ url_for('listItems', category_name=category.name)}}"><span class="glyphicon glyphicon-menu-left"></span></a>
+
+            <a href="{{ url_for('editItem', category_name=category.name, item_name=item.name)}}"><span class="glyphicon glyphicon-pencil"></span></a>
+  
+            <a href="{{ url_for('delItem', category_name=category.name, item_name=item.name)}}"><span class="glyphicon glyphicon-trash"></span></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
