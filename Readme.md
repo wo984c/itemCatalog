@@ -18,23 +18,23 @@ _For the live version of this APP click [here](https://itemcatalog.wo984c.net)._
 
 ## Getting Started
 
-_Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)_
-_Install [Vagrant](https://www.vagrantup.com/downloads.html)_
-_Clone the Udacity's VM repo_
-``` sh
-# git clone https://github.com/udacity/fullstack-nanodegree-vm 
-```
-_Prepare and Launch the Vagrant VM from terminal_
-``` sh
-# cd fullstack-nanodegree-vm/vagrant
-# sudo vagrant up
-# sudo vagrant ssh
-```
-_Clone the item catalog repo into /vagrant_
-``` sh
-# cd /vagrant
-# git clone https://github.com/wo984c/itemCatalog.git
-```
+* _Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)_
+* _Install [Vagrant](https://www.vagrantup.com/downloads.html)_
+* _Clone the Udacity's VM repo_
+    ``` sh
+    # git clone https://github.com/udacity/fullstack-nanodegree-vm 
+    ```
+* _Prepare and Launch the Vagrant VM from terminal_
+    ``` sh
+    # cd fullstack-nanodegree-vm/vagrant
+    # sudo vagrant up
+    # sudo vagrant ssh
+    ```
+* _Clone the item catalog repo into /vagrant_
+    ``` sh
+    # cd /vagrant
+    # git clone https://github.com/wo984c/itemCatalog.git
+    ```
 
 ### Data Base Setup
 
