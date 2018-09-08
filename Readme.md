@@ -69,7 +69,7 @@ _In addition to the GUI, the following JSON Endpoins have been implemented:_
 
 ## License
 
-_Multi User Blog is released under the [MIT license](https://github.com/wo984c/itemCatalog/LICENSE)._
+_Multi User Blog is released under the [MIT license](https://github.com/wo984c/itemCatalog/LICENSE.txt)._
 
 
 # References
